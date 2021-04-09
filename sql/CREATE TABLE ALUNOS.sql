@@ -6,4 +6,5 @@ CREATE TABLE Alunos (
     email varchar(320) not null unique,
     
     primary key(cpf)
+    
 )
