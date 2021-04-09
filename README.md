@@ -1,14 +1,14 @@
-## Getting Started
+E ai gente,
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+src tem as classes
+a classe main no momento é App.java (é a parte UI, falta bastante, se não der tempo, é só criar uma aplicação CLI mega simples)
+User.java pra entradas novas (completo)
+Database.java tem todas as paradas do mysql (falta put somente)
 
-## Folder Structure
+sql tem as tabelas pra vcs reproduzirem no mysql (nunca fiz acesso remoto então se der merda vcs criam server)
+.vscode meio obvio
 
-The workspace contains two folders by default, where:
+se der java.lang.NullPointerException, é pq tá faltando um driver de mysql pra java.
+vcs tem que baixar aqui: https://dev.mysql.com/downloads/connector/j/
+ai tem que ir em "Referenced Libraries" e apontar pro jar baixado.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-## Dependency Management
-
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
