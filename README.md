@@ -1,14 +1,7 @@
-E ai gente,
+Projeto para ser avaliado na faculdade. Mistura de conhecimentos de Java, SQL, Swing e OOP.
 
-src tem as classes
-a classe main no momento é App.java (é a parte UI, falta bastante, se não der tempo, é só criar uma aplicação CLI mega simples)
-User.java pra entradas novas (completo)
-Database.java tem todas as paradas do mysql (falta put somente)
+Simples e com intuito de mostrar meu conhecimento até agora sobre esses conceitos. Não espero trabalhar nisso muito depois.
+Descobri a utilidade de usar um designer, mexer com swing foi uma das piores experiências que tive recentemente.
 
-sql tem as tabelas pra vcs reproduzirem no mysql (nunca fiz acesso remoto então se der merda vcs criam server)
-.vscode meio obvio
-
-se der java.lang.NullPointerException, é pq tá faltando um driver de mysql pra java.
-vcs tem que baixar aqui: https://dev.mysql.com/downloads/connector/j/
-ai tem que ir em "Referenced Libraries" e apontar pro jar baixado.
+Tomara que fique bom xD
 
