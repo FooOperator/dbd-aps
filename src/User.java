@@ -1,13 +1,15 @@
 public class User {
     private String name;
+    private String gender;
     private Byte age;
     private String email;
     private String course;
     private String cpf;
     private String table;
 
-    public User(String name, Byte age, String email, String course, String cpf, String table) {
+    public User(String name, String gender, Byte age, String email, String course, String cpf, String table) {
         this.name = name;
+        this.gender = gender;
         this.age = age;
         this.email = email;
         this.course = course;
@@ -61,6 +63,14 @@ public class User {
     
     public void setTable(String table) {
         this.table = table;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
 

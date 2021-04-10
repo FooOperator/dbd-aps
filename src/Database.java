@@ -9,20 +9,8 @@ public class Database {
 
     public static void main(String args[]) {
         Database kj = new Database();
-        User test1 = new User("Trashbags", (byte) 12, "Fuckfarms2com", "Nerdola", "1234", "Alunos");
         User test2;
-        
-        try {
-            kj.createConnection();
-            kj.post(test1);
-            test2 = kj.get(test1.getTable(), test1.getName());
-            kj.delete(test2.getTable(), test2.getName());
-            kj.db.close();
-        } catch (SQLException e) { 
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } 
+
     }
     public void createConnection() throws ClassNotFoundException, SQLException {
         String dbURL = "jdbc:mysql://127.0.0.1:3302/dbd";
@@ -61,10 +49,10 @@ public class Database {
         PreparedStatement ps = db.prepareStatement(sql);
         ps.setString(1, name);
         ResultSet rs = ps.executeQuery();
-        User user = new User(" ", (byte)0, " ", " ", " ", " ");
+        User user = new User(" ", "", (byte)0, " ", " ", " ", " ");
         try {
             while (rs.next()) {
-                user = new User(rs.getString("nome"), rs.getByte("idade"), rs.getString("email"), rs.getString("curso"), rs.getString("cpf"), table);
+                user = new User(rs.getString("nome"), rs.getString(""), rs.getByte("idade"), rs.getString("email"), rs.getString("curso"), rs.getString("cpf"), table);
             } 
             return user;
         } catch (SQLException e) {
