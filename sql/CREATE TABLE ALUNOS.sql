@@ -4,7 +4,8 @@ CREATE TABLE Alunos (
     idade smallint not null,
     cpf numeric(11) not null unique,
     email varchar(320) not null unique,
-    
+    genero varchar(10),
+	
     primary key(cpf)
     
 )
