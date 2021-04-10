@@ -1,3 +1,4 @@
+import javax.xml.crypto.Data;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -6,25 +7,17 @@ import java.sql.ResultSet;
 
 public class Database {
     Connection db;
+    static final String aluno = "Alunos";
+    static final String prof = "Professores";
+    static final String nome = "Lucas Guerra Cardoso";
+    static Database kj;
 
-    public static void main(String args[]) {
-        Database kj = new Database();
-        User test1 = new User("Lucas Guerra Cardoso",
-                "Masculino",
-                (byte) 21,
-                "example@gmail.com",
-                "Ciência Da Computação",
-                "11122233345",
-                "Alunos");
-        User test2;
-        try {
-            kj.createConnection();
-            kj.post(test1);
-            test2 = kj.get("Alunos", "Lucas Guerra Cardoso");
-            System.out.println(test1.getName());
-        } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) {
+        kj = new Database();
+        User here;
+        User postTest = new User(nome, "Masculino", (byte) 21, "example@gmail.com", "Ciência Da Computação", "11122233345", aluno);
+        User putTest = new User("Luska Guelra", "Feminino", (byte) 21, "example@gmail.com", "Ciência Da Computação", "11122233345", aluno);
+
     }
     public void createConnection() throws ClassNotFoundException, SQLException {
         String dbURL = "jdbc:mysql://127.0.0.1:3302/dbd";
@@ -42,7 +35,7 @@ public class Database {
     }
     public void post(User entry) throws SQLException {
         String sql = String.format("INSERT INTO %s (nome, idade, email, curso, cpf, genero) VALUES (?, ?, ?, ?, ?, ?)", entry.getTable());
-        
+
         try {
             PreparedStatement ps = db.prepareStatement(sql);
             ps.setString(1, entry.getName());
@@ -76,8 +69,25 @@ public class Database {
         }
         return user;
     }
-    public void put(String table, String name) throws SQLException {
-        String sql = String.format("UPDATE %s SET", table);
+    public void put(User updated, String target) throws SQLException {
+        String sql = String.format("UPDATE %s SET nome = ?, idade = ?, email = ?, curso = ?, cpf = ?, genero = ? WHERE nome = ?", updated.getTable());
+
+        try {
+            PreparedStatement ps = db.prepareStatement(sql);
+
+            ps.setString(1, updated.getName());
+            ps.setByte(2, updated.getAge());
+            ps.setString(3, updated.getEmail());
+            ps.setString(4, updated.getCourse());
+            ps.setString(5, updated.getCpf());
+            ps.setString(6, updated.getGender());
+            ps.setString(7, target);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            System.out.println(String.format("%s updated!", target));
+        }
     }
     public void delete(String table, String name) throws SQLException {
         String sql = String.format("DELETE FROM %s WHERE nome LIKE ?", table);
@@ -90,7 +100,7 @@ public class Database {
         } finally {
             System.out.println(String.format("%s deleted", name));
         }
-        
+
     }
     public void entriesSort(String table, String gender) throws SQLException {
         String sql = String.format("SELECT * FROM %s WHERE genero LIKE ?", table);
