@@ -163,7 +163,7 @@ public class GUI {
         leftJPanel.add(leftPanelBtnsPanel, new GridConstraints(7, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         clearButton = new JButton();
         clearButton.setBackground(new Color(-15789812));
-        Font clearButtonFont = this.$$$getFont$$$("JetBrains Mono", Font.BOLD, 16, clearButton.getFont());
+        Font clearButtonFont = this.$$$getFonte$$$("JetBrains Mono", Font.BOLD, 16, clearButton.getFont());
         if (clearButtonFont != null) clearButton.setFont(clearButtonFont);
         clearButton.setForeground(new Color(-3224372));
         clearButton.setText("LIMPAR");
@@ -171,7 +171,7 @@ public class GUI {
         leftPanelBtnsPanel.add(clearButton, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         postButton = new JButton();
         postButton.setBackground(new Color(-10640783));
-        Font postButtonFont = this.$$$getFont$$$("JetBrains Mono", Font.BOLD, 16, postButton.getFont());
+        Font postButtonFont = this.$$$getFonte$$$("JetBrains Mono", Font.BOLD, 16, postButton.getFont());
         if (postButtonFont != null) postButton.setFont(postButtonFont);
         postButton.setForeground(new Color(-3224372));
         postButton.setText("CRIAR");
@@ -210,7 +210,7 @@ public class GUI {
         loadButton = new JButton();
         loadButton.setBackground(new Color(-16734554));
         loadButton.setEnabled(true);
-        Font loadButtonFont = this.$$$getFont$$$("JetBrains Mono", Font.BOLD, 16, loadButton.getFont());
+        Font loadButtonFont = this.$$$getFonte$$$("JetBrains Mono", Font.BOLD, 16, loadButton.getFont());
         if (loadButtonFont != null) loadButton.setFont(loadButtonFont);
         loadButton.setForeground(new Color(-3224372));
         loadButton.setText("CARREGAR");
@@ -218,7 +218,7 @@ public class GUI {
         rightPanelBtnsPanel.add(loadButton);
         deleteButton = new JButton();
         deleteButton.setBackground(new Color(-3652048));
-        Font deleteButtonFont = this.$$$getFont$$$("JetBrains Mono", Font.BOLD, 16, deleteButton.getFont());
+        Font deleteButtonFont = this.$$$getFonte$$$("JetBrains Mono", Font.BOLD, 16, deleteButton.getFont());
         if (deleteButtonFont != null) deleteButton.setFont(deleteButtonFont);
         deleteButton.setForeground(new Color(-3224372));
         deleteButton.setHideActionText(false);
@@ -227,7 +227,7 @@ public class GUI {
         rightPanelBtnsPanel.add(deleteButton);
         putButton = new JButton();
         putButton.setBackground(new Color(-14265220));
-        Font putButtonFont = this.$$$getFont$$$("JetBrains Mono", Font.BOLD, 16, putButton.getFont());
+        Font putButtonFont = this.$$$getFonte$$$("JetBrains Mono", Font.BOLD, 16, putButton.getFont());
         if (putButtonFont != null) putButton.setFont(putButtonFont);
         putButton.setForeground(new Color(-3224372));
         putButton.setText("ATUALIZAR");
@@ -255,7 +255,7 @@ public class GUI {
     /**
      * @noinspection ALL
      */
-    private Font $$$getFont$$$(String fontName, int style, int size, Font currentFont) {
+    private Font $$$getFonte$$$(String fontName, int style, int size, Font currentFont) {
         if (currentFont == null) return null;
         String resultName;
         if (fontName == null) {
