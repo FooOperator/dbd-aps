@@ -5,9 +5,9 @@ public class Database {
     Connection conn;
 
     public void createConnection() throws ClassNotFoundException, SQLException {
-        String dbURL = "jdbc:mysql://127.0.0.1:3302/dbd";
-        String username = "Lucas";
-        String password = "jajajajajajaj1234mfg";
+        String dbURL = "jdbc:mysql://INSIRAENDEREÇODOBANCO/SEUSCHEMA";
+        String username = "";
+        String password = "";
         try {
             this.conn = DriverManager.getConnection(dbURL, username, password);
         } catch (SQLException e) {
