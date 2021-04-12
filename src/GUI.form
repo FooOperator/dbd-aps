@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="GUI">
-  <grid id="27dc6" binding="BG" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="BG" layout-manager="GridLayoutManager" row-count="5" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="1527" height="407"/>
+      <xy x="20" y="20" width="1673" height="449"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="84b3f" binding="leftJPanel" layout-manager="GridLayoutManager" row-count="8" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="84b3f" binding="leftJPanel" layout-manager="GridLayoutManager" row-count="8" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="0" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <toolTipText value="Insira seu nome. Entradas de nomes já na lista não serão adicionadas."/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="4c3ad" class="javax.swing.JLabel" binding="nomeLabel">
@@ -68,7 +70,7 @@
             </constraints>
             <properties>
               <text value="Tipo De Usuário"/>
-              <toolTipText value="Escolha entre Aluno ou Professor (OBRIGATÓRIO)"/>
+              <toolTipText value="Escolha entre Aluno ou Professor"/>
             </properties>
           </component>
           <hspacer id="ae8b9">
@@ -84,20 +86,47 @@
             </constraints>
             <properties>
               <text value="Gênero"/>
+              <toolTipText value="Escolha seu gênero."/>
             </properties>
           </component>
-          <component id="80664" class="javax.swing.JRadioButton" binding="masculinoRadioButton" default-binding="true">
+          <grid id="b6fda" binding="genderPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="true" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties>
-              <selected value="true"/>
-              <text value="Masculino"/>
-            </properties>
-          </component>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="80664" class="javax.swing.JRadioButton" binding="masculinoRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="Masculino"/>
+                </properties>
+              </component>
+              <component id="f0ef3" class="javax.swing.JRadioButton" binding="outroRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Outro"/>
+                </properties>
+              </component>
+              <component id="76d74" class="javax.swing.JRadioButton" binding="femininoRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Feminino"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
           <component id="1d759" class="javax.swing.JTextField" binding="nomeTx">
             <constraints>
-              <grid row="0" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
@@ -105,15 +134,17 @@
           </component>
           <component id="9a02e" class="javax.swing.JSpinner" binding="idadeSpinner">
             <constraints>
-              <grid row="2" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <inheritsPopupMenu value="false"/>
               <toolTipText value=""/>
+              <visible value="true"/>
             </properties>
           </component>
           <component id="d538e" class="javax.swing.JTextField" binding="emailTx">
             <constraints>
-              <grid row="3" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
@@ -121,24 +152,43 @@
           </component>
           <component id="94fb4" class="javax.swing.JTextField" binding="cpfTx">
             <constraints>
-              <grid row="4" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
             <properties/>
           </component>
-          <component id="10ff9" class="javax.swing.JRadioButton" binding="alunoRadioButton" default-binding="true">
+          <grid id="fb9cf" binding="rolePanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="true" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties>
-              <selected value="true"/>
-              <text value="Aluno"/>
-            </properties>
-          </component>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="10ff9" class="javax.swing.JRadioButton" binding="alunoRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="Aluno"/>
+                </properties>
+              </component>
+              <component id="1480d" class="javax.swing.JRadioButton" binding="professorRadioButton">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="Professor"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
           <component id="2fcd0" class="javax.swing.JComboBox" binding="cursoCombo">
             <constraints>
-              <grid row="6" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <model>
@@ -162,64 +212,121 @@
               </model>
             </properties>
           </component>
-          <component id="c5de3" class="javax.swing.JButton" binding="postButton">
+          <grid id="972b7" binding="leftPanelBtnsPanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties>
-              <background color="-10640783"/>
-              <text value="CREATE"/>
-              <toolTipText value="Adiciona entrada ao banco."/>
-            </properties>
-          </component>
-          <component id="f0ef3" class="javax.swing.JRadioButton" binding="outroRadioButton" default-binding="true">
-            <constraints>
-              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Outro"/>
-            </properties>
-          </component>
-          <component id="76d74" class="javax.swing.JRadioButton" binding="femininoRadioButton" default-binding="true">
-            <constraints>
-              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Feminino"/>
-            </properties>
-          </component>
-          <component id="1480d" class="javax.swing.JRadioButton" binding="professorRadioButton">
-            <constraints>
-              <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <selected value="true"/>
-              <text value="Professor"/>
-            </properties>
-          </component>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="78669" class="javax.swing.JButton" binding="clearButton">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-15789812"/>
+                  <font name="JetBrains Mono" size="16" style="1"/>
+                  <foreground color="-3224372"/>
+                  <text value="LIMPAR"/>
+                  <toolTipText value="Limpa o formulário."/>
+                </properties>
+              </component>
+              <component id="c5de3" class="javax.swing.JButton" binding="postButton">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-10640783"/>
+                  <font name="JetBrains Mono" size="16" style="1"/>
+                  <foreground color="-3224372"/>
+                  <text value="CRIAR"/>
+                  <toolTipText value="Adiciona entrada ao banco."/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
       </grid>
-      <grid id="f260e" binding="rightJPanel" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="f260e" binding="rightJPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
         <border type="none"/>
         <children>
-          <component id="241b7" class="javax.swing.JList" binding="alunosList">
+          <tabbedpane id="62099" binding="queryPane">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="50"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="200" height="200"/>
               </grid>
             </constraints>
             <properties>
-              <model/>
+              <tabLayoutPolicy value="0"/>
+              <tabPlacement value="1"/>
             </properties>
-          </component>
-          <grid id="8d4a4" binding="buttonsJPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <border type="none"/>
+            <children>
+              <grid id="8bb24" binding="alunosPanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Alunos"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="241b7" class="javax.swing.JList" binding="alunosList">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <model/>
+                      <selectionMode value="0"/>
+                    </properties>
+                  </component>
+                  <component id="d0ab4" class="javax.swing.JScrollBar" binding="alunosListScroll">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+              <grid id="9ecc4" binding="profPanel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <tabbedpane title="Professores"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="8148b" class="javax.swing.JList" binding="profList">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <model/>
+                      <selectionMode value="0"/>
+                    </properties>
+                  </component>
+                  <component id="73624" class="javax.swing.JScrollBar" binding="profListScroll">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </tabbedpane>
+          <grid id="8d4a4" binding="rightPanelBtnsPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
             <border type="none"/>
@@ -229,17 +336,20 @@
                 <properties>
                   <background color="-16734554"/>
                   <enabled value="true"/>
-                  <foreground color="-8153962"/>
-                  <text value="LOAD"/>
-                  <toolTipText value="Carrega entrada escolhida na lista."/>
+                  <font name="JetBrains Mono" size="16" style="1"/>
+                  <foreground color="-3224372"/>
+                  <text value="CARREGAR"/>
+                  <toolTipText value="Carrega entrada selecionada na lista."/>
                 </properties>
               </component>
               <component id="863c" class="javax.swing.JButton" binding="deleteButton">
                 <constraints/>
                 <properties>
                   <background color="-3652048"/>
+                  <font name="JetBrains Mono" size="16" style="1"/>
+                  <foreground color="-3224372"/>
                   <hideActionText value="false"/>
-                  <text value="DELETE"/>
+                  <text value="DELETAR"/>
                   <toolTipText value="Deleta entra selecionada na lista do banco."/>
                 </properties>
               </component>
@@ -247,40 +357,41 @@
                 <constraints/>
                 <properties>
                   <background color="-14265220"/>
-                  <text value="UPDATE"/>
-                  <toolTipText value="Atualiza entrada seleciona da lista no banco."/>
+                  <font name="JetBrains Mono" size="16" style="1"/>
+                  <foreground color="-3224372"/>
+                  <text value="ATUALIZAR"/>
+                  <toolTipText value="Atualiza entrada seleciona da lista no banco. Mudar nome ou Tipo De Usuário não terá impacto."/>
                 </properties>
               </component>
             </children>
           </grid>
-          <component id="3b7dd" class="javax.swing.JLabel" binding="alunoLabel">
-            <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Alunos No Banco"/>
-            </properties>
-          </component>
-          <component id="5ae34" class="javax.swing.JLabel" binding="profLabel">
-            <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Professores No Banco"/>
-            </properties>
-          </component>
-          <component id="8148b" class="javax.swing.JList" binding="profList">
-            <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <preferred-size width="150" height="50"/>
-              </grid>
-            </constraints>
-            <properties>
-              <model/>
-            </properties>
-          </component>
         </children>
       </grid>
+      <vspacer id="25663">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="38036">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="70233">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="910fa">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="7ac7">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
     </children>
   </grid>
   <buttonGroups>
